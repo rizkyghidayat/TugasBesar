@@ -2,13 +2,19 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package tugasbesar;
+package TBJava;
+
+import java.util.Scanner;
 
 /**
  *
- * @author AHO
+ * @author XOC
  */
-public class kenyamanankelassetget {
+public class kenyamananKelas extends RuangKelas{
+    
+    Scanner dos = new Scanner(System.in);
+    
+    
     private String kebisingan;
     private String bau;
     private String kebocoran;
@@ -84,8 +90,34 @@ public class kenyamanankelassetget {
         else
             this.keausan="inputan salah";
     }
-
-
     
+    //public void kenyamanan(){
+    public void inputan(){
+        System.out.println("\nKebisingan (bising/tidak bising) = ");
+        String ba=dos.next();
+        setKebisingan(ba);
+        System.out.println("Bau (bau/tidak bau) = ");
+        String bb=dos.next();
+        setBau(bb);
+        System.out.println("Kebocoran (bocor/tidak bocor) = ");
+        String bc=dos.next();
+        setKebocoran(bc);
+        System.out.println("Kerusakan (rusak/tidak rusak) = ");
+        String bd=dos.next();
+        setKerusakan(bd);
+        System.out.println("Keausan (aus/tidak aus) = ");
+        String be=dos.next();
+        setKeausan(be);
+        
+    }
+    
+    //public void hasilkenyamanan(){
+    public void outputan(){
+        System.out.println("\nKebisingan kelas = "+getKebisingan());
+        System.out.println("Bau kelas = "+getBau());
+        System.out.println("Kebocoran = "+getKebocoran());
+        System.out.println("Kerusakan = "+getKerusakan());
+        System.out.println("Keausan = "+getKeausan());
+    }
     
 }

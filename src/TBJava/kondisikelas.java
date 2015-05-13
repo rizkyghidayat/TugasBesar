@@ -2,13 +2,17 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package tugasbesar;
+package TBJava;
+
+import java.util.Scanner;
 
 /**
  *
- * @author AHO
+ * @author Danang
  */
-public class kondisikelassetget {
+public class kondisikelas extends RuangKelas{
+    Scanner kn = new Scanner(System.in);
+    
     private String namaruangan;
     private String lokasiruaangan;
     private String programstudi;
@@ -28,8 +32,7 @@ public class kondisikelassetget {
         return luas;
     }
     
-    
-        String bentuk (int panjang , int lebar){
+    String bentuk (int panjang , int lebar){
         
         if (panjang!=lebar){
         return "sesuai";
@@ -140,5 +143,49 @@ public class kondisikelassetget {
         this.luas = luas;
     }
     
+    
+    
+    public void kondisi(){
+    //public void inputan(){
+        System.out.println("Nama ruang = ");
+        String da=kn.next();
+        setNamaruangan(da);
+        System.out.println("Lokasi ruang = ");
+        String dd=kn.next();
+        setLokasiruaangan(dd);
+        System.out.println("Program studi = ");
+        String db=kn.next();
+        setProgramstudi(db);
+        System.out.println("Fakultas = ");
+        String dc=kn.next();
+        setFakultas(dc);
+        System.out.println("\nPanjang ruang = ");
+        int de=kn.nextInt();
+        setPanjang(de);
+        System.out.println("Lebar ruang = ");
+         int df=kn.nextInt();
+        setLebar(df);
+        System.out.println("Jumlah kursi = ");
+         int dg=kn.nextInt();
+        setJumlahkursi(dg);
+        System.out.println("jumlah pintu = ");
+         int dh=kn.nextInt();
+        setJumlahpintu(dh);
+        System.out.println("Jumlah jendela = ");
+         int di=kn.nextInt();
+        setJumlahjendela(di);
+        
+    }
+    
+    public void hasilkondisi(){
+    //public void outputan(){
+        System.out.println("Ruangan "+getNamaruangan());
+        System.out.println(getLokasiruaangan());
+        System.out.println("Jurusan "+getProgramstudi());
+        System.out.println("fakultas "+getFakultas());
+        System.out.println("\nPanjang ruang "+getPanjang());
+        System.out.println("Lebar ruang "+getLebar());
+        System.out.println("Kesesuaian ruangan = ");
+    }
     
 }

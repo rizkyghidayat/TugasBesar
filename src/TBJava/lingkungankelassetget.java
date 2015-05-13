@@ -2,20 +2,23 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package tugasbesar;
+package TBJava;
 
 /**
  *
- * @author AHO
+ * @author Danang
  */
 import java.util.Scanner;
-public class lingkungankelassetget {
+abstract public class lingkungankelassetget {
+    Scanner scan = new Scanner(System.in);
     private String kondisilantai;
     private String kondisidinding;
     private String kondisiatap;
     private String kondisipintu;
     private String kondisijendela;
-Scanner scan = new Scanner(System.in);
+    
+    
+    
     public String getKondisilantai() {
         return kondisilantai;
     }
@@ -91,5 +94,7 @@ Scanner scan = new Scanner(System.in);
 			System.out.println("Input Salah");
     }
     
+    abstract void inputan();
+    abstract void outputan();
     
 }
